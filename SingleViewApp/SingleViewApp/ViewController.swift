@@ -74,6 +74,11 @@ class ViewController: UIViewController {
         slider.addTarget(self, action: #selector(ViewController.sliderDidChange(slider:)), for: .valueChanged)
         
         self.view.addSubview(slider)
+        
+        let imageView = UIImageView(image: UIImage(named: "xcicon"))
+        imageView.frame = CGRect(x: 10, y: 420, width: 100, height: 100)
+        
+        self.view.addSubview(imageView)
     }
 
     @IBAction func tapped() -> Void {
