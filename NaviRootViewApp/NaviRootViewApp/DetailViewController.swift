@@ -40,6 +40,26 @@ class DetailViewController: UIViewController {
         }
     }
 
+    // 显示控件代码
+    func loadCodes(ctrl: String) {
+        var str: String
+        switch ctrl {
+        case "UILabel":
+            str = "let label = UILabel(frame: self.view.bounds)\n"
+            str += "label.backgroundColor = UIColor.clear\n"
+            str += "label.textAlignment = .center\n"
+            str += "label.font = UIFont.systemFont(ofSize: 36)\n"
+            str += "self.view.addSubview(label)\n"
+        default:
+            str = "other ctrl"
+        }
+        
+        //
+        let txt = UITextView(frame: CGRect(x: 0, y: 60, width: self.view.bounds.width, height: self.view.bounds.height - 60))
+        txt.text = str
+        self.view.addSubview(txt)
+    }
+    
     // 清空所有子视图
     func clearViews() {
         for v in self.view.subviews as [UIView] {
@@ -55,6 +75,7 @@ class DetailViewController: UIViewController {
         
         if self.navigationItem.rightBarButtonItem!.title! == "代码" {
             self.navigationItem.rightBarButtonItem!.title = "效果"
+            loadCodes(ctrl: self.title!)
         }else{
             self.navigationItem.rightBarButtonItem!.title = "代码"
             loadControl(ctrl: self.title!)
