@@ -35,6 +35,28 @@ class DetailViewController: UIViewController {
             label.font = UIFont.systemFont(ofSize: 36)
             label.text = "Hello, Ucai"
             self.view.addSubview(label)
+        case "UIButton":
+            let button = UIButton(frame: CGRect(x: 110, y: 120, width: 100, height: 60))
+            button.backgroundColor = UIColor.blue
+            button.setTitleColor(UIColor.red, for: .normal)
+            button.setTitleColor(UIColor.white, for: .highlighted)
+            button.setTitle("点击我", for: .normal)
+            button.addTarget(self, action: #selector(DetailViewController.buttonClicked(sender:)), for: .touchUpInside)
+            self.view.addSubview(button)
+        case "UIImageView":
+            let image = UIImage(named: "Swift")
+            let imageView = UIImageView(frame: CGRect(x: (self.view.bounds.width - (image?.size.width)!) / 2.0, y: 120.0, width: (image?.size.width)!, height: (image?.size.height)!))
+            imageView.image = image
+            self.view.addSubview(imageView)
+        case "UISlider":
+            let slider = UISlider(frame: CGRect(x: 60.0, y: 120.0, width: 200.0, height: 30.0))
+            self.view.addSubview(slider)
+        case "UIWebView_deprecated":
+            let webView = UIWebView(frame: self.view.bounds)
+            let url = NSURL(string: "http://www.ucai.cn")
+            let request = NSURLRequest(url: url! as URL)
+            webView.loadRequest(request as URLRequest)
+            self.view.addSubview(webView)
         default:
             print("control name: \(ctrl)")
         }
@@ -50,11 +72,16 @@ class DetailViewController: UIViewController {
             str += "label.textAlignment = .center\n"
             str += "label.font = UIFont.systemFont(ofSize: 36)\n"
             str += "self.view.addSubview(label)\n"
+        case "UIButton":
+            str = "UIButton"
+        case "UISlider":
+            str = "let slider = UISlider(frame: CGRect(x: 60.0, y: 120.0, width: 200.0, height: 30.0))\n"
+            str += "self.view.addSubview(slider)\n"
         default:
             str = "other ctrl"
         }
         
-        //
+        // 在导航条下方位置显示源代码
         let txt = UITextView(frame: CGRect(x: 0, y: 60, width: self.view.bounds.width, height: self.view.bounds.height - 60))
         txt.text = str
         self.view.addSubview(txt)
@@ -65,6 +92,11 @@ class DetailViewController: UIViewController {
         for v in self.view.subviews as [UIView] {
             v.removeFromSuperview()
         }
+    }
+    
+    @objc
+    func buttonClicked(sender: AnyObject) {
+        print("you clicked button")
     }
     
     // 显示按钮控件
