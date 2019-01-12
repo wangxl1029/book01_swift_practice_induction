@@ -14,6 +14,7 @@
 		24A5835321E9CF07009E6580 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24A5835121E9CF07009E6580 /* LaunchScreen.storyboard */; };
 		24A5835E21E9CF07009E6580 /* NaviRootViewAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A5835D21E9CF07009E6580 /* NaviRootViewAppTests.swift */; };
 		24A5836921E9CF07009E6580 /* NaviRootViewAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A5836821E9CF07009E6580 /* NaviRootViewAppUITests.swift */; };
+		24A5837721E9E2FC009E6580 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A5837621E9E2FC009E6580 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		24A5836421E9CF07009E6580 /* NaviRootViewAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NaviRootViewAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		24A5836821E9CF07009E6580 /* NaviRootViewAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaviRootViewAppUITests.swift; sourceTree = "<group>"; };
 		24A5836A21E9CF07009E6580 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24A5837621E9E2FC009E6580 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				24A5834821E9CF04009E6580 /* AppDelegate.swift */,
 				24A5834A21E9CF05009E6580 /* ViewController.swift */,
+				24A5837621E9E2FC009E6580 /* DetailViewController.swift */,
 				24A5834C21E9CF05009E6580 /* Main.storyboard */,
 				24A5834F21E9CF07009E6580 /* Assets.xcassets */,
 				24A5835121E9CF07009E6580 /* LaunchScreen.storyboard */,
@@ -256,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24A5837721E9E2FC009E6580 /* DetailViewController.swift in Sources */,
 				24A5834B21E9CF05009E6580 /* ViewController.swift in Sources */,
 				24A5834921E9CF04009E6580 /* AppDelegate.swift in Sources */,
 			);

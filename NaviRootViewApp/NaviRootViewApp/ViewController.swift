@@ -11,7 +11,6 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     // 表格加载
     var tableView: UITableView?
-    
     // 控件类型
     let ctrls = ["UILabel", "UIButton", "UIImageView", "UISlider", "UIWebView", "UISegmentedControl", "UISwitch", "UITextField", "UITextView", "UIScrollView", "UISearchBar", "UIPageControl", "UIDatePicker", "UIPickerView", "UIProgressView", "UIToolbar", "UIActionSheet", "UIActivityIndicatorView"]
     
@@ -19,7 +18,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.title = "Swift控件演示"
-        //
+        // 装载TableView展示控件列表
         self.tableView = UITableView(frame: self.view.frame, style: UITableView.Style.plain)
         self.tableView!.delegate = self
         self.tableView!.dataSource = self
