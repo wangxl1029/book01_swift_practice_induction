@@ -16,6 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        // 把起始ViewController作为导航控件封装，我们在ViewController里就能调用导航条进行页面切换了
+        let rootViewController = ViewController()
+        let rootNavigationController = UINavigationController(rootViewController: rootViewController)
+        // 窗口的根视图控制器就是导航视图控制器了
+        self.window!.rootViewController = rootNavigationController
+        
         return true
     }
 
