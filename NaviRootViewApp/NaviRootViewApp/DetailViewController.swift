@@ -14,9 +14,18 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        // 设置背景颜色
+        self.view.backgroundColor = UIColor.black
+        // 设置代码和控件展示切换按钮，增加到导航条右侧
+        // 这里采用了navigationController不能增加navigationItem
+        let btn = UIBarButtonItem(title: "代码", style: .plain, target: self, action: #selector(DetailViewController.btnCodeClicked(sender:)))
+        self.navigationItem.rightBarButtonItem = btn
     }
     
-
+    @objc
+    func btnCodeClicked(sender: AnyObject) {
+        print("title: \(self.title!)")
+    }
     /*
     // MARK: - Navigation
 

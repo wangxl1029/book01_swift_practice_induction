@@ -44,5 +44,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         return cell
     }
+    
+    // UITableViewDelegate 协议方法，点击时调用
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // 跳转到detailViewController，取消选中状态
+        self.tableView!.deselectRow(at: indexPath, animated: true)
+        // 创建DetailViewController
+        let detailViewController = DetailViewController()
+        // 传递控件title，在detailView里用于判断生成响应的控件
+        detailViewController.title = self.ctrls[indexPath.row]
+        // navigationController跳转到detailViewController
+        self.navigationController!.pushViewController(detailViewController, animated: true)
+    }
 }
 
