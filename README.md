@@ -32,4 +32,19 @@ xcode 版本：10.1，如下图。
 </html>
 
 
-无效的爱信息图床外链：<http://t1.aixinxi.net/o_1d0gtop5s1tk7edu1skptt11i89a.png-j.jpg>
+备份用的[爱信息图](https://tu.aixinxi.net/index.php)床外链：<http://t1.aixinxi.net/o_1d0gtop5s1tk7edu1skptt11i89a.png-j.jpg>
+
+版本说明
+------
+
+### v0.1.0-w.1
+
+w.1表示Wizard dot 1版本。
+
+#### 发布内容
+
+### v0.1.0
+
+最初版本。
+
+#### 发布内容

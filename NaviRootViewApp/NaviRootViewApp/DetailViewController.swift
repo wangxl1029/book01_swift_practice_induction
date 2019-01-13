@@ -112,8 +112,22 @@ class DetailViewController: UIViewController {
             self.navigationItem.rightBarButtonItem!.title = "代码"
             loadControl(ctrl: self.title!)
         }
+        
+        /*
+        使用内置的UINavigationControl时，不能在NavigationBar里添加Item
+        let nav = UINavigationItem()
+        let btn = UIBarButtonItem(title: "效果", style: .bordered, target: self, action: "btnBackClicked")
+        nav.rightBarButtonItem = btn
+        self.navigationController.navigationBar.pushItem(nav, animated: true)
+         */
     }
     
+    /*
+     func btnBackClicked(sender: AnyObject) {
+     self.navigationController.navigationBar.popItem(animated: true)
+     }
+     */
+
     /*
     // MARK: - Navigation
 
