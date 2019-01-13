@@ -45,16 +45,16 @@ class DetailViewController: UIViewController {
             self.view.addSubview(button)
         case "UIImageView":
             let image = UIImage(named: "Swift")
-            let imageView = UIImageView(frame: CGRect(x: (self.view.bounds.width - (image?.size.width)!) / 2.0, y: 120.0, width: (image?.size.width)!, height: (image?.size.height)!))
+            let imageView = UIImageView(frame: CGRect(x: (self.view.bounds.width - image!.size.width ) / 2.0, y: 120.0, width: image!.size.width, height: image!.size.height))
             imageView.image = image
-            self.view.addSubview(imageView)
+                self.view.addSubview(imageView)
         case "UISlider":
             let slider = UISlider(frame: CGRect(x: 60.0, y: 120.0, width: 200.0, height: 30.0))
             self.view.addSubview(slider)
         case "UIWebView_deprecated":
             let webView = UIWebView(frame: self.view.bounds)
             let url = NSURL(string: "http://www.ucai.cn")
-            let request = NSURLRequest(url: url! as URL)
+        let request = NSURLRequest(url: url! as URL)
             webView.loadRequest(request as URLRequest)
             self.view.addSubview(webView)
         default:
