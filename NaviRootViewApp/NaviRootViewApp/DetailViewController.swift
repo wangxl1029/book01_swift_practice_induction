@@ -47,7 +47,7 @@ class DetailViewController: UIViewController {
             let image = UIImage(named: "Swift")
             let imageView = UIImageView(frame: CGRect(x: (self.view.bounds.width - image!.size.width ) / 2.0, y: 120.0, width: image!.size.width, height: image!.size.height))
             imageView.image = image
-                self.view.addSubview(imageView)
+            self.view.addSubview(imageView)
         case "UISlider":
             let slider = UISlider(frame: CGRect(x: 60.0, y: 120.0, width: 200.0, height: 30.0))
             self.view.addSubview(slider)

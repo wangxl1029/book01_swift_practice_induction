@@ -14,3 +14,22 @@ Swift Practice Induction
 
 所以，这个文档是我读书结合实践整理出来的个人笔记和实验代码，以方便工作和分享。
 
+编译和运行环境
+------------
+本篇Markdown所有笔者实验代码xcode环境如下。
+
+<html>
+<div style="background-color:lightgrey">
+xcode &raquo; Building setting &raquo;
+<ul>
+<li> iOS Deployment Target &raquo; iOS 12.1
+<li> Swift Language Version &raquo; Swift 4.2
+</ul>
+xcode 版本：10.1，如下图。
+</div>
+<a href="https://imgchr.com/i/FHtIgK"><img src="https://s2.ax1x.com/2019/01/06/FHtIgK.md.png" alt="FHtIgK.png" border="0" /></a>
+
+</html>
+
+
+无效的爱信息图床外链：<http://t1.aixinxi.net/o_1d0gtop5s1tk7edu1skptt11i89a.png-j.jpg>
