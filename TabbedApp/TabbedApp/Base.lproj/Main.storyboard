@@ -87,14 +87,14 @@
         <!--第三个视图-->
         <scene sceneID="2Is-jL-gfI">
             <objects>
-                <viewController id="CdW-ZA-cgr" userLabel="第三个视图" sceneMemberID="viewController">
+                <viewController id="CdW-ZA-cgr" userLabel="第三个视图" customClass="ThirdViewController" customModule="TabbedApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F55-6O-jvu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="1Jw-ub-5km"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="第三" image="first" id="g4j-di-tn3" userLabel="第三"/>
+                    <tabBarItem key="tabBarItem" title="third" image="first" id="g4j-di-tn3" userLabel="Third"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rzz-OK-j5l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
