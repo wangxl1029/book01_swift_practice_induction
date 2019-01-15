@@ -37,6 +37,17 @@ xcode 版本：10.1，如下图。
 版本说明
 ------
 
+### v0.2.0-alpha.2
+
+#### 发布内容
+
++ 8.4.2 表格控件简单示例
+
+##### 编译说明
+
+有一个编译警告，如下。
+> 'UIAlertView' was deprecated in iOS 9.0: UIAlertView is deprecated. Use  UIAlertController with a preferredStyle of UIAlertControllerStyleAlert instead
+
 ### v0.2.0-alpha
 
 因为是alpha版本，所以++发布在dev branch++上。
