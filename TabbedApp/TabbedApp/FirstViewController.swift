@@ -36,7 +36,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         // 初始化数据，这一次数据，我们放在属性列表文件里
         self.allnames = [0:[String](self.ctrlnames!), 1:[String]([
-            "UIDatePiker 日期选择器",
+            "UIDatePicker 日期选择器",
             "UIWebView 网页选项器",
             "UIToolbar 工具条",
             "UITableView 表格视图"])]
@@ -116,6 +116,32 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     // 创建各单元显示内容（创建参数indexPath指定的单元）
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // 为了提供表格显示性能，在声明时已注册
+        let identify: String = "SwiftCell"
+        // 同一单元格重复使用，在声明时已注册
+        
+        let secno = indexPath.section
+        let data = self.allnames?[secno]
+        if secno == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: identify, for: indexPath)
+            cell.accessoryType = .disclosureIndicator
+            
+            let image = UIImage(named: "heart")
+            cell.imageView!.image = image
+            cell.textLabel!.text = data![indexPath.row]
+            
+            return cell
+        }else{
+            let adcell = UITableViewCell(style: .subtitle, reuseIdentifier: "SwiftCell")
+            adcell.textLabel!.text = data![indexPath.row]
+            print(adcell.textLabel!.text!)
+            adcell.detailTextLabel?.text = "这是\(data![indexPath.row])的说明"
+
+            return adcell
+        }
+    }
+    
+    func tableView_old(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // 为了提供表格显示性能，在声明时已注册
         let identify: String = "SwiftCell"
         // 同一单元格重复使用，在声明时已注册
