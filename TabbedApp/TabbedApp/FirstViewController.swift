@@ -48,15 +48,15 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     {
         self.ctype = UIControlType.Basic
         
-        //
+        // 创建表视图
         self.tableView = UITableView(frame: CGRect(x: 0, y: 100, width: self.view.frame.width, height: self.view.frame.height - 100), style: .plain)
         self.tableView!.delegate = self
         self.tableView!.dataSource = self
-        //
+        // 创建一个重用的单元格
         self.tableView!.register(UITableViewCell.self, forCellReuseIdentifier: "SwiftCell")
         self.view.addSubview(self.tableView!)
         
-        //
+        // 创建表头标签
         let headerLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 30))
         headerLabel.backgroundColor = UIColor.black
         headerLabel.textColor = UIColor.white
@@ -70,15 +70,15 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBAction func groupClicked(sender: UIBarButtonItem){
         self.ctype = UIControlType.Advanced
         
-        //
+        // 创建表视图
         self.tableView = UITableView(frame: CGRect(x: 0, y: 100, width: self.view.frame.width, height: self.view.frame.height - 100), style: .grouped)
         self.tableView!.delegate = self
         self.tableView!.dataSource = self
-        //
+        // 创建一个重用的单元格
         self.tableView!.register(UITableViewCell.self, forCellReuseIdentifier: "SwiftCell")
         self.view.addSubview(self.tableView!)
         
-        //
+        // 创建表头标签
         let headerLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 30))
         headerLabel.backgroundColor = UIColor.black
         headerLabel.textColor = UIColor.white
@@ -114,8 +114,9 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     // 创建各单元显示内容（创建参数indexPath指定的单元）
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // 为了提供表格显示性能，在声明时已注册
         let identify: String = "SwiftCell"
-        //
+        // 同一单元格重复使用，在声明时已注册
         let cell = tableView.dequeueReusableCell(withIdentifier: identify, for: indexPath)
         cell.accessoryType = .disclosureIndicator
         
@@ -136,6 +137,11 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         alertview.message = "你选中了【\(itemString)】"
         alertview.addButton(withTitle: "确定")
         alertview.show()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources thatcan be recreated
     }
 }
 
