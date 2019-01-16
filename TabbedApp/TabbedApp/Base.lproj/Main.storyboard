@@ -19,9 +19,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6cL-ul-tl0">
-                                <rect key="frame" x="0.0" y="20" width="375" height="80"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="Sgg-mn-Dxx"/>
+                                    <constraint firstAttribute="height" constant="44" id="Awn-3L-JLm"/>
                                 </constraints>
                                 <items>
                                     <barButtonItem title="plain" id="gTi-XH-EF5">

@@ -20,6 +20,8 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var adHeader:  [String]?
     var ctype: UIControlType!
     
+    let OVERHEAD_MARGIN:CGFloat = 100 - 44
+    
     override func loadView() {
         super.loadView()
     }
@@ -49,7 +51,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.ctype = UIControlType.Basic
         
         // 创建表视图
-        self.tableView = UITableView(frame: CGRect(x: 0, y: 100, width: self.view.frame.width, height: self.view.frame.height - 100), style: .plain)
+        self.tableView = UITableView(frame: CGRect(x: 0, y: self.OVERHEAD_MARGIN, width: self.view.frame.width, height: self.view.frame.height - self.OVERHEAD_MARGIN), style: .plain)
         self.tableView!.delegate = self
         self.tableView!.dataSource = self
         // 创建一个重用的单元格
@@ -71,7 +73,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.ctype = UIControlType.Advanced
         
         // 创建表视图
-        self.tableView = UITableView(frame: CGRect(x: 0, y: 100, width: self.view.frame.width, height: self.view.frame.height - 100), style: .grouped)
+        self.tableView = UITableView(frame: CGRect(x: 0, y: self.OVERHEAD_MARGIN, width: self.view.frame.width, height: self.view.frame.height - self.OVERHEAD_MARGIN), style: .grouped)
         self.tableView!.delegate = self
         self.tableView!.dataSource = self
         // 创建一个重用的单元格
