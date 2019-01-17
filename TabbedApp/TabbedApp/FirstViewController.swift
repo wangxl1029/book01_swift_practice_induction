@@ -70,12 +70,16 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.tableView!.tableHeaderView = headerLabel
     }
     
-    @IBAction func clickedSubtitle(sender: UIBarButtonItem){
-        self.adCellStyle = .subtitle
-        groupClicked(sender: sender)
-    }
-
-    func groupClicked(sender: UIBarButtonItem){
+    @IBAction func groupClicked(sender: UIBarButtonItem){
+        switch sender.title! {
+        case "value1":
+            self.adCellStyle = .value1
+        case "value2":
+            self.adCellStyle = .value2
+        default:
+            self.adCellStyle = .subtitle
+        }
+        
         self.ctype = UIControlType.Advanced
         
         // 创建表视图
@@ -96,17 +100,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         headerLabel.font = UIFont.italicSystemFont(ofSize: 20)
         self.tableView!.tableHeaderView = headerLabel
     }
-    
-    @IBAction func clickedValue1(sender: UIBarButtonItem){
-        self.adCellStyle = .value1
-        groupClicked(sender: sender)
-    }
-    
-    @IBAction func clickedValue2(sender: UIBarButtonItem){
-        self.adCellStyle = .value2
-        groupClicked(sender: sender)
-    }
-    
+
     // 在本例中，只有一个分区
     func numberOfSections(in tableView: UITableView) -> Int {
         return self.ctype == UIControlType.Basic ? 1 : 2;

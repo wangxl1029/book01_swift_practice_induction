@@ -31,17 +31,17 @@
                                     </barButtonItem>
                                     <barButtonItem title="grouped" id="PPU-zM-Op5">
                                         <connections>
-                                            <action selector="clickedSubtitleWithSender:" destination="9pv-A4-QxB" id="pzn-Bw-9gZ"/>
+                                            <action selector="groupClickedWithSender:" destination="9pv-A4-QxB" id="Img-oP-Zyv"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem title="value1" id="NHQ-X3-x3m">
                                         <connections>
-                                            <action selector="clickedValue1WithSender:" destination="9pv-A4-QxB" id="029-MC-Arm"/>
+                                            <action selector="groupClickedWithSender:" destination="9pv-A4-QxB" id="dVm-Ub-tDF"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem title="value2" id="Qg5-m8-hv9">
                                         <connections>
-                                            <action selector="clickedValue2WithSender:" destination="9pv-A4-QxB" id="XPb-4A-rGO"/>
+                                            <action selector="groupClickedWithSender:" destination="9pv-A4-QxB" id="cn1-cu-6Gi"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
