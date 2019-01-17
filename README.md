@@ -113,7 +113,6 @@ w.1表示Wizard dot 1版本。
 - \[jpg03\]: <http://t1.aixinxi.net/o_1d16bhi5l49s1bf1h4q419185ba.png-j.jpg>
 - \[jpg04\]: <http://t1.aixinxi.net/o_1d16c4m1n19op8kv14rkp8i8f6a.png-j.jpg>
 - \[jpg05\]: <http://t1.aixinxi.net/o_1d16cnce4ik3ein1hse5f61n7aa.png-j.jpg>
-- \[mp4#01\]: <http://t1.aixinxi.net/o_1d16dmj611fi5qou1902m7bljoc.mp4>
 
 [jpg01]: http://t1.aixinxi.net/o_1d169rl7a14h81blo1q2u13i2dsaa.png-j.jpg "“v0.1.0 综合效果演示”"
 [jpg02]: http://t1.aixinxi.net/o_1d16b8jj616qitap18q77c1725f.png-j.jpg "master-detail view 竖屏展示"

@@ -19,6 +19,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var allnames:  Dictionary<Int, [String]>?
     var adHeader:  [String]?
     var ctype: UIControlType!
+    var adCellStyle = UITableViewCell.CellStyle.default
     
     let OVERHEAD_MARGIN:CGFloat = 100 - 44
     
@@ -69,7 +70,12 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.tableView!.tableHeaderView = headerLabel
     }
     
-    @IBAction func groupClicked(sender: UIBarButtonItem){
+    @IBAction func clickedSubtitle(sender: UIBarButtonItem){
+        self.adCellStyle = .subtitle
+        groupClicked(sender: sender)
+    }
+
+    func groupClicked(sender: UIBarButtonItem){
         self.ctype = UIControlType.Advanced
         
         // 创建表视图
@@ -89,6 +95,16 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         headerLabel.text = "高级 UIKit 控件"
         headerLabel.font = UIFont.italicSystemFont(ofSize: 20)
         self.tableView!.tableHeaderView = headerLabel
+    }
+    
+    @IBAction func clickedValue1(sender: UIBarButtonItem){
+        self.adCellStyle = .value1
+        groupClicked(sender: sender)
+    }
+    
+    @IBAction func clickedValue2(sender: UIBarButtonItem){
+        self.adCellStyle = .value2
+        groupClicked(sender: sender)
     }
     
     // 在本例中，只有一个分区
@@ -132,7 +148,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
             
             return cell
         }else{
-            let adcell = UITableViewCell(style: .subtitle, reuseIdentifier: "SwiftCell")
+            let adcell = UITableViewCell(style: self.adCellStyle, reuseIdentifier: "SwiftCell")
             adcell.textLabel!.text = data![indexPath.row]
             print(adcell.textLabel!.text!)
             adcell.detailTextLabel?.text = "这是\(data![indexPath.row])的说明"
