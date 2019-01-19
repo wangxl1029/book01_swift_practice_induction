@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24134BA621F30FAF009EC770 /* ChatDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24134BA521F30FAF009EC770 /* ChatDataSource.swift */; };
+		24134BA821F310C7009EC770 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24134BA721F310C7009EC770 /* TableView.swift */; };
+		24134BB021F321AA009EC770 /* mebubble.png in Resources */ = {isa = PBXBuildFile; fileRef = 24134BAB21F321AA009EC770 /* mebubble.png */; };
+		24134BB121F321AA009EC770 /* xiaohua.png in Resources */ = {isa = PBXBuildFile; fileRef = 24134BAC21F321AA009EC770 /* xiaohua.png */; };
+		24134BB221F321AA009EC770 /* sz.png in Resources */ = {isa = PBXBuildFile; fileRef = 24134BAD21F321AA009EC770 /* sz.png */; };
+		24134BB321F321AA009EC770 /* yoububble.png in Resources */ = {isa = PBXBuildFile; fileRef = 24134BAE21F321AA009EC770 /* yoububble.png */; };
+		24134BB421F321AA009EC770 /* xiaoming.png in Resources */ = {isa = PBXBuildFile; fileRef = 24134BAF21F321AA009EC770 /* xiaoming.png */; };
+		248B76D021F1D99600E9C9FE /* MessageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248B76CF21F1D99600E9C9FE /* MessageItem.swift */; };
+		248B76D221F1F7C500E9C9FE /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248B76D121F1F7C500E9C9FE /* TableViewCell.swift */; };
 		24A5830D21E78136009E6580 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A5830C21E78136009E6580 /* AppDelegate.swift */; };
 		24A5830F21E78136009E6580 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A5830E21E78136009E6580 /* FirstViewController.swift */; };
 		24A5831121E78136009E6580 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A5831021E78136009E6580 /* SecondViewController.swift */; };
@@ -37,6 +46,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		24134BA521F30FAF009EC770 /* ChatDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDataSource.swift; sourceTree = "<group>"; };
+		24134BA721F310C7009EC770 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
+		24134BAB21F321AA009EC770 /* mebubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mebubble.png; sourceTree = "<group>"; };
+		24134BAC21F321AA009EC770 /* xiaohua.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xiaohua.png; sourceTree = "<group>"; };
+		24134BAD21F321AA009EC770 /* sz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sz.png; sourceTree = "<group>"; };
+		24134BAE21F321AA009EC770 /* yoububble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yoububble.png; sourceTree = "<group>"; };
+		24134BAF21F321AA009EC770 /* xiaoming.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xiaoming.png; sourceTree = "<group>"; };
+		248B76CF21F1D99600E9C9FE /* MessageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageItem.swift; sourceTree = "<group>"; };
+		248B76D121F1F7C500E9C9FE /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		24A5830921E78136009E6580 /* TabbedApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabbedApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24A5830C21E78136009E6580 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24A5830E21E78136009E6580 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +98,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2449C63721F2BAD1006859D2 /* image */ = {
+			isa = PBXGroup;
+			children = (
+				24134BAB21F321AA009EC770 /* mebubble.png */,
+				24134BAD21F321AA009EC770 /* sz.png */,
+				24134BAC21F321AA009EC770 /* xiaohua.png */,
+				24134BAF21F321AA009EC770 /* xiaoming.png */,
+				24134BAE21F321AA009EC770 /* yoububble.png */,
+			);
+			path = image;
+			sourceTree = "<group>";
+		};
+		2449C63821F2BB3E006859D2 /* chat */ = {
+			isa = PBXGroup;
+			children = (
+				248B76CF21F1D99600E9C9FE /* MessageItem.swift */,
+				248B76D121F1F7C500E9C9FE /* TableViewCell.swift */,
+				24134BA521F30FAF009EC770 /* ChatDataSource.swift */,
+				24134BA721F310C7009EC770 /* TableView.swift */,
+			);
+			path = chat;
+			sourceTree = "<group>";
+		};
 		24A5830021E78136009E6580 = {
 			isa = PBXGroup;
 			children = (
@@ -103,7 +144,9 @@
 		24A5830B21E78136009E6580 /* TabbedApp */ = {
 			isa = PBXGroup;
 			children = (
+				2449C63721F2BAD1006859D2 /* image */,
 				24A5830C21E78136009E6580 /* AppDelegate.swift */,
+				2449C63821F2BB3E006859D2 /* chat */,
 				24A5830E21E78136009E6580 /* FirstViewController.swift */,
 				24A5831021E78136009E6580 /* SecondViewController.swift */,
 				24C637D421ED6A77003AB5E6 /* ThirdViewController.swift */,
@@ -238,10 +281,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24134BB321F321AA009EC770 /* yoububble.png in Resources */,
 				24C637D721ED8C3E003AB5E6 /* Controls.plist in Resources */,
 				24A5831921E78138009E6580 /* LaunchScreen.storyboard in Resources */,
 				24A5831621E78138009E6580 /* Assets.xcassets in Resources */,
+				24134BB421F321AA009EC770 /* xiaoming.png in Resources */,
 				24A5831421E78136009E6580 /* Main.storyboard in Resources */,
+				24134BB121F321AA009EC770 /* xiaohua.png in Resources */,
+				24134BB221F321AA009EC770 /* sz.png in Resources */,
+				24134BB021F321AA009EC770 /* mebubble.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,7 +315,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				24A5831121E78136009E6580 /* SecondViewController.swift in Sources */,
+				248B76D021F1D99600E9C9FE /* MessageItem.swift in Sources */,
+				24134BA621F30FAF009EC770 /* ChatDataSource.swift in Sources */,
 				24A5830D21E78136009E6580 /* AppDelegate.swift in Sources */,
+				248B76D221F1F7C500E9C9FE /* TableViewCell.swift in Sources */,
+				24134BA821F310C7009EC770 /* TableView.swift in Sources */,
 				24C637D521ED6A77003AB5E6 /* ThirdViewController.swift in Sources */,
 				24A5830F21E78136009E6580 /* FirstViewController.swift in Sources */,
 			);
