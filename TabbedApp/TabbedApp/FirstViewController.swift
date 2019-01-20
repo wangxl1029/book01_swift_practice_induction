@@ -12,7 +12,7 @@ enum UIControlType {
     case Basic
     case Advanced
 }
-class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate {
 
     var tableView: UITableView?
     var ctrlnames: [String]?
@@ -20,6 +20,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var adHeader:  [String]?
     var ctype: UIControlType!
     var adCellStyle = UITableViewCell.CellStyle.default
+    
     
     let OVERHEAD_MARGIN:CGFloat = 100 - 44
     
@@ -99,6 +100,16 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         headerLabel.text = "高级 UIKit 控件"
         headerLabel.font = UIFont.italicSystemFont(ofSize: 20)
         self.tableView!.tableHeaderView = headerLabel
+
+        
+        // 绑定长按事件响应
+        
+        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(tableViewCellLongPress(gestrueRecognizer:)))
+        // 代理
+        longPress.delegate = self
+        longPress.minimumPressDuration = 1.0
+        // 将长按手势加到需要实现长按的视图里
+        self.tableView!.addGestureRecognizer(longPress)
     }
 
     // 在本例中，只有一个分区
@@ -180,6 +191,53 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources thatcan be recreated
+    }
+    
+    @objc
+    func tableViewCellLongPress(gestrueRecognizer: UILongPressGestureRecognizer){
+        if gestrueRecognizer.state == .began {
+            print("UIGestureRecognizerStateBegan")
+        }
+        if gestrueRecognizer.state == .changed {
+            print("UIGestureRecognizerStateChange")
+        }
+        if gestrueRecognizer.state == .ended {
+            if self.tableView!.isEditing == false {
+                self.tableView!.setEditing(true, animated: true)
+            }else{
+                self.tableView!.setEditing(false, animated: true)
+            }
+        }
+    }
+    
+    // 下面这个方法确定了单元格处于什么状态
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        if indexPath.section == 1 {
+            return UITableViewCell.EditingStyle.insert
+        }
+        
+        return UITableViewCell.EditingStyle.delete
+    }
+    
+    // 点击删除和点击添加的效果
+    func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+        let data = self.allnames![indexPath.section]!
+        let itemString = data[indexPath.row]
+        
+        return "确定删除\(itemString)"
+    }
+
+    // 真正让添加和删除按钮生效的方法
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            self.allnames?[indexPath.section]?.remove(at: indexPath.row)
+            
+            self.tableView!.reloadData()
+            self.tableView!.setEditing(true, animated: true)
+        }else if editingStyle == .insert {
+            self.allnames?[indexPath.section]?.insert("插入新的一项", at: indexPath.row + 1)
+            self.tableView!.reloadData()
+        }
     }
 }
 
