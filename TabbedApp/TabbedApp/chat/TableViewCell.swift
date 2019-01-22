@@ -41,10 +41,12 @@ class TableViewCell: UITableViewCell {
         
         var y: CGFloat = 0
         // 显示用户头像
-        if self.msgItem.logo != "" {
-            let logo = self.msgItem.logo
+        if self.msgItem.user.username != "" {
+            let thisUser = self.msgItem.user            
+            //self.avatarImage.removeFromSuperview()
             
-            self.avatarImage = UIImageView(image: UIImage(named: (logo != "") ? logo! : "noAvatar.png"))
+            let imageName = thisUser.avatar != "" ? thisUser.avatar : "noAvatar.png"
+            self.avatarImage = UIImageView(image:UIImage(named:imageName))
             self.avatarImage.layer.cornerRadius = 9.0
             self.avatarImage.layer.masksToBounds = true
             self.avatarImage.layer.borderColor = UIColor(white: 0.0, alpha: 0.2).cgColor

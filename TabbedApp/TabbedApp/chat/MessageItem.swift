@@ -15,8 +15,8 @@ enum ChatType{
 }
 
 class MessageItem{
-    // 头像
-    var logo: String!
+    // 用户信息
+    var user: UserInfo
     // 消息时间
     var date: NSDate!
     // 消息类型
@@ -47,7 +47,7 @@ class MessageItem{
     }
     
     // 构造文本消息体
-    convenience init(body: NSString, logo: String, date: NSDate, mtype: ChatType){
+    convenience init(body: NSString, user:UserInfo, date: NSDate, mtype: ChatType){
         let font = UIFont.boldSystemFont(ofSize: 12)
         let width = 225, height = 10000.0
         let atts = [NSAttributedString.Key.font: font]
@@ -63,20 +63,20 @@ class MessageItem{
         
         let insets:UIEdgeInsets = (mtype == ChatType.Mine ? MessageItem.getTextInsetsMine() : MessageItem.getTextInsetsSomeone())
         
-        self.init(logo: logo, date: date, mtype: mtype, view: label, insets: insets)
+        self.init(user: user, date: date, mtype: mtype, view: label, insets: insets)
     }
     
     // 可以传入更多的自定义视图
-    init(logo: String, date: NSDate, mtype: ChatType, view: UIView, insets: UIEdgeInsets) {
+    init(user: UserInfo, date: NSDate, mtype: ChatType, view: UIView, insets: UIEdgeInsets) {
         self.view = view
-        self.logo = logo
+        self.user = user
         self.date = date
         self.mtype = mtype
         self.insets = insets
     }
     
     // 构造图片消息体
-    convenience init(image: UIImage, logo: String, date: NSDate, mtype: ChatType){
+    convenience init(image: UIImage, user:UserInfo, date: NSDate, mtype: ChatType){
         var size = image.size
         // 等比缩放
         if size.width > 220 {
@@ -89,6 +89,6 @@ class MessageItem{
         imageView.layer.cornerRadius = 5.0
         let insets: UIEdgeInsets = (mtype == ChatType.Mine ? MessageItem.getImageInsetsMine() : MessageItem.getImageInsetsSomeone())
         
-        self.init(logo: logo, date: date, mtype: mtype, view: imageView, insets: insets)
+        self.init(user: user, date: date, mtype: mtype, view: imageView, insets: insets)
     }
 }

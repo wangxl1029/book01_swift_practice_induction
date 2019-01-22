@@ -14,6 +14,7 @@
 		24134BB221F321AA009EC770 /* sz.png in Resources */ = {isa = PBXBuildFile; fileRef = 24134BAD21F321AA009EC770 /* sz.png */; };
 		24134BB321F321AA009EC770 /* yoububble.png in Resources */ = {isa = PBXBuildFile; fileRef = 24134BAE21F321AA009EC770 /* yoububble.png */; };
 		24134BB421F321AA009EC770 /* xiaoming.png in Resources */ = {isa = PBXBuildFile; fileRef = 24134BAF21F321AA009EC770 /* xiaoming.png */; };
+		24801F0B21F6F31300CA38D4 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24801F0A21F6F31300CA38D4 /* UserInfo.swift */; };
 		248B76D021F1D99600E9C9FE /* MessageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248B76CF21F1D99600E9C9FE /* MessageItem.swift */; };
 		248B76D221F1F7C500E9C9FE /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248B76D121F1F7C500E9C9FE /* TableViewCell.swift */; };
 		24A5830D21E78136009E6580 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A5830C21E78136009E6580 /* AppDelegate.swift */; };
@@ -24,6 +25,7 @@
 		24A5831921E78138009E6580 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24A5831721E78138009E6580 /* LaunchScreen.storyboard */; };
 		24A5832421E78139009E6580 /* TabbedAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A5832321E78139009E6580 /* TabbedAppTests.swift */; };
 		24A5832F21E78139009E6580 /* TabbedAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A5832E21E78139009E6580 /* TabbedAppUITests.swift */; };
+		24A70EDA21F5E09500441D55 /* TableHeaderViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A70ED921F5E09500441D55 /* TableHeaderViewCell.swift */; };
 		24C637D521ED6A77003AB5E6 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C637D421ED6A77003AB5E6 /* ThirdViewController.swift */; };
 		24C637D721ED8C3E003AB5E6 /* Controls.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24C637D621ED8C3E003AB5E6 /* Controls.plist */; };
 /* End PBXBuildFile section */
@@ -53,6 +55,7 @@
 		24134BAD21F321AA009EC770 /* sz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sz.png; sourceTree = "<group>"; };
 		24134BAE21F321AA009EC770 /* yoububble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yoububble.png; sourceTree = "<group>"; };
 		24134BAF21F321AA009EC770 /* xiaoming.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xiaoming.png; sourceTree = "<group>"; };
+		24801F0A21F6F31300CA38D4 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		248B76CF21F1D99600E9C9FE /* MessageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageItem.swift; sourceTree = "<group>"; };
 		248B76D121F1F7C500E9C9FE /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		24A5830921E78136009E6580 /* TabbedApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabbedApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +72,7 @@
 		24A5832A21E78139009E6580 /* TabbedAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TabbedAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		24A5832E21E78139009E6580 /* TabbedAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbedAppUITests.swift; sourceTree = "<group>"; };
 		24A5833021E78139009E6580 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24A70ED921F5E09500441D55 /* TableHeaderViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableHeaderViewCell.swift; sourceTree = "<group>"; };
 		24C637D421ED6A77003AB5E6 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		24C637D621ED8C3E003AB5E6 /* Controls.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Controls.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,8 +117,10 @@
 		2449C63821F2BB3E006859D2 /* chat */ = {
 			isa = PBXGroup;
 			children = (
+				24801F0A21F6F31300CA38D4 /* UserInfo.swift */,
 				248B76CF21F1D99600E9C9FE /* MessageItem.swift */,
 				248B76D121F1F7C500E9C9FE /* TableViewCell.swift */,
+				24A70ED921F5E09500441D55 /* TableHeaderViewCell.swift */,
 				24134BA521F30FAF009EC770 /* ChatDataSource.swift */,
 				24134BA721F310C7009EC770 /* TableView.swift */,
 			);
@@ -319,9 +325,11 @@
 				24134BA621F30FAF009EC770 /* ChatDataSource.swift in Sources */,
 				24A5830D21E78136009E6580 /* AppDelegate.swift in Sources */,
 				248B76D221F1F7C500E9C9FE /* TableViewCell.swift in Sources */,
+				24801F0B21F6F31300CA38D4 /* UserInfo.swift in Sources */,
 				24134BA821F310C7009EC770 /* TableView.swift in Sources */,
 				24C637D521ED6A77003AB5E6 /* ThirdViewController.swift in Sources */,
 				24A5830F21E78136009E6580 /* FirstViewController.swift in Sources */,
+				24A70EDA21F5E09500441D55 /* TableHeaderViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
